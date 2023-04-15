@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import ListItem from "./components/ListItem";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.titleWrapper}>
+        <Text style={styles.title}>Markets</Text>
+      </View>
+      <View style={styles.divider} />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+  },
+  titleWrapper: {
+    marginTop: 20,
+    paddingHorizontal: 16,
+  },
+  title: {
+    fontSize: 26,
+    fontWeight: "bold",
+  },
+  divider: {
+    marginTop: 16,
+    marginHorizontal: 16,
+    backgroundColor: "#A9ABB1",
+    height: StyleSheet.hairlineWidth,
   },
 });
